@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_3.HomeFragment">
+
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+    </CalendarView>
+
+    <ListView
+        android:id="@+id/fragment_home_list"
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:layout_gravity="bottom">
+
+    </ListView>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="63dp"
+        android:layout_height="138dp"
+        android:layout_gravity="bottom|end"
+        app:fab_labelStyle="@style/floatingActionsMenu_fab_style">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:fabSize="mini"
+            app:fab_title="随礼" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:fabSize="mini"
+            app:fab_title="收礼" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</FrameLayout>

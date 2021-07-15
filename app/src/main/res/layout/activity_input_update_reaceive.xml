@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/text_view_cat_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="248dp"
+        android:text="@string/reason"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="@string/button_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/text_view_cat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_cat_name"
+        app:layout_constraintStart_toEndOf="@+id/text_view_cat_name"
+        app:layout_constraintTop_toTopOf="@+id/text_view_cat_name"
+        app:layout_constraintVertical_bias="0.538" />
+
+
+    <TextView
+        android:id="@+id/text_view_cat_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="132dp"
+        android:text="@string/money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_cat_money"
+        app:layout_constraintStart_toEndOf="@+id/text_view_cat_money"
+        app:layout_constraintTop_toTopOf="@+id/text_view_cat_money"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <TextView
+        android:id="@+id/text_view_cat_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="192dp"
+        android:text="@string/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_date"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_cat_date"
+        app:layout_constraintStart_toEndOf="@+id/text_view_cat_date"
+        app:layout_constraintTop_toTopOf="@+id/text_view_cat_date" />
+
+
+
+    <Button
+        android:id="@+id/button_setdate"
+        android:layout_width="31dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_date"
+        app:layout_constraintStart_toEndOf="@+id/edit_text_date"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_date" />
+
+    <Spinner
+        android:id="@+id/spinner_receive_reason"
+        android:layout_width="211dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_cat_reason"
+        app:layout_constraintStart_toEndOf="@+id/text_view_cat_reason"
+        app:layout_constraintTop_toTopOf="@+id/text_view_cat_reason" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
