@@ -2,7 +2,35 @@
 
 [TOC]
 
-
+- [HumansNotes](#humansnotes)
+    - [第一章 人情笔记APP开发](#第一章-人情笔记app开发)
+      - [1.1软件需求及功能分析](#11软件需求及功能分析)
+      - [1.2Activity设计](#12activity设计)
+      - [1.3关键实现技术](#13关键实现技术)
+      - [1.4测试及使用说明](#14测试及使用说明)
+        - [一、使用说明](#一使用说明)
+        - [二、测试](#二测试)
+      - [1.5开发环境](#15开发环境)
+        - [一、build.gradle（project）](#一buildgradleproject)
+        - [二、Build.gradle（app）](#二buildgradleapp)
+      - [1.6开发过程](#16开发过程)
+        - [一、启动页开发过程](#一启动页开发过程)
+          - [1.配置启动界面的布局文件](#1配置启动界面的布局文件)
+          - [2.用启动界面的activity渲染该布局文件](#2用启动界面的activity渲染该布局文件)
+          - [3.在AndroidManifest文件中设置StartActivity为启动页](#3在androidmanifest文件中设置startactivity为启动页)
+          - [4.启动界面效果图](#4启动界面效果图)
+          - [5.去除导航栏可以用下面的方法](#5去除导航栏可以用下面的方法)
+        - [二、软件的三大界面](#二软件的三大界面)
+        - [三、主界面](#三主界面)
+        - [四、随礼/收礼记录界面需求：](#四随礼收礼记录界面需求)
+          - [1.ListView+ArrayAdapter实现列表。](#1listviewarrayadapter实现列表)
+          - [2.onCreateContextMenu+onContextItemSelected为列表项实现菜单及响应。](#2oncreatecontextmenuoncontextitemselected为列表项实现菜单及响应)
+          - [3.Intent+onActivityResult实现两个activity数据传递。](#3intentonactivityresult实现两个activity数据传递)
+          - [4.Serializable+Android APP的数据区文件实现数据的分离及数据的持久化。](#4serializableandroid-app的数据区文件实现数据的分离及数据的持久化)
+          - [5.lazyload+onResume实现fragment懒加载。](#5lazyloadonresume实现fragment懒加载)
+        - [五、UpdateActivity数据更新](#五updateactivity数据更新)
+      - [1.7有待完善的地方](#17有待完善的地方)
+    - [第2章Android安全调查](#第2章android安全调查)
 
 ### 第一章 人情笔记APP开发
 
