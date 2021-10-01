@@ -413,9 +413,7 @@ android:background="@drawable/ic_app_start"
 
 ![image-20211001095546392](./readmeimages/image-20211001095546392.png)
 
-最初我设置启动页面的背景图片是直接使用了imageview控件，但是一直无法去除两边的白色空隙，最终网上查询方法参考了：
-
-[Android开发中的全屏背景显示方案]: https://blog.csdn.net/weixin_34292402/article/details/85788424
+最初我设置启动页面的背景图片是直接使用了imageview控件，但是一直无法去除两边的白色空隙，最终网上查询方法参考了：[Android开发中的全屏背景显示方案](https://blog.csdn.net/weixin_34292402/article/details/85788424)
 
 尝试了一下直接使用android:background发现可以实现想要的效果。
 
@@ -449,9 +447,9 @@ setContentView(R.layout.activity_splash);
 
 ###### 5.去除导航栏可以用下面的方法
 
-参考：
+参考：[Android开发中的全屏背景显示方案](https://blog.csdn.net/weixin_34292402/article/details/85788424)
 
-[Android开发中的全屏背景显示方案]: https://blog.csdn.net/weixin_34292402/article/details/85788424
+
 
 ![image-20211001095934744](./readmeimages/image-20211001095934744.png)
 
@@ -528,7 +526,7 @@ new Handler().postDelayed(new Runnable() {
 
 - 配置主界面的日历
 
-1. CalendarView是安卓自带的一个日历控件，我们可以在主活动中 通过设置setOnDataChangeListener() 来为其添加监听事件。参考：https://www.jb51.net/article/158010.htm
+1. CalendarView是安卓自带的一个日历控件，我们可以在主活动中 通过设置setOnDataChangeListener() 来为其添加监听事件。参考：[Android开发之日历CalendarView用法示例](https://www.jb51.net/article/158010.htm)
 
 2. 利用安卓自带的日历控件，先配置好布局文件，如下图所示
 
@@ -744,7 +742,9 @@ onCreateContextMenu,在创建菜单时调用，可以获得创建菜单时的视
 
 ### 第2章Android安全调查
 
- 	我认为与安全相关的是app在手机中文件的存储。在学习数据持久化的时候涉及到几种方式：参考：https://www.cnblogs.com/hanyonglu/archive/2012/03/01/2374894.html
+我认为与安全相关的是app在手机中文件的存储。在学习数据持久化的时候涉及到几种方式：
+
+参考：[Android实现数据存储技术](https://www.cnblogs.com/hanyonglu/archive/2012/03/01/2374894.html)
 
 1. 使用SharedPreferences存储数据
 2. 文件存储数据
