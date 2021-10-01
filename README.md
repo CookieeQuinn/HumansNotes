@@ -59,7 +59,7 @@
 
    - 随礼界面、主界面、收礼界面如下显示。
 
-     ![image-20211001093058146](.\readmeimages\image-20211001093058146.png)
+     ![image-20211001093058146](./readmeimages/image-20211001093058146.png)
      
      
 
@@ -73,7 +73,7 @@
 
    - StartActivity实现的应用启动界面如下图。
 
-   ![image-20210715233537166](.\readmeimages\image-20210715233537166.png)
+   ![image-20210715233537166](./readmeimages/image-20210715233537166.png)
 
 3. UpdateActivity
 
@@ -85,11 +85,11 @@
 
    - 随礼的UpdateActivity如下图所示，有名字、金额、日期。
 
-     ![image-20210715233735475](.\readmeimages\image-20210715233735475.png)
+     ![image-20210715233735475](./readmeimages/image-20210715233735475.png)
 
    - 收礼的UpdateActivity如下图所示，有名字、金额、日期和一个缘由。
 
-     ![image-20210715233742630](.\readmeimages\image-20210715233742630.png)
+     ![image-20210715233742630](./readmeimages/image-20210715233742630.png)
 
 #### 1.3关键实现技术
 
@@ -283,31 +283,31 @@
 
 运行程序，显示启动页；启动页后，自动跳转到主界面
 
-![image-20211001094552401](.\readmeimages\image-20211001094552401.png)
+![image-20211001094552401](./readmeimages/image-20211001094552401.png)
 
 点击浏览收礼、随礼界面
 
-![image-20211001094607886](.\readmeimages\image-20211001094607886.png)
+![image-20211001094607886](./readmeimages/image-20211001094607886.png)
 
  回到主界面，点击右下角按钮，选择收礼，输入信息，选着日期，选择缘由，确定
 
-![image-20211001094626078](.\readmeimages\image-20211001094626078.png)
+![image-20211001094626078](./readmeimages/image-20211001094626078.png)
 
 查看收礼信息，长按刚刚新增的记录，选择修改
 
-<img src=".\readmeimages\image-20211001094701879.png" alt="image-20211001094701879"/>
+<img src="./readmeimages/image-20211001094701879.png" alt="image-20211001094701879"/>
 
 修改信息，点击确定
 
-![image-20211001094804869](.\readmeimages\image-20211001094804869.png)
+![image-20211001094804869](./readmeimages/image-20211001094804869.png)
 
 长按刚刚修改的记录，选择追加，输入信息，点击确定
 
-![image-20211001094834035](.\readmeimages\image-20211001094834035.png)
+![image-20211001094834035](./readmeimages/image-20211001094834035.png)
 
 长按刚刚追加的记录，选择删除
 
-![image-20211001094852751](.\readmeimages\image-20211001094852751.png)
+![image-20211001094852751](./readmeimages/image-20211001094852751.png)
 
 #### 1.5开发环境
 
@@ -383,7 +383,7 @@ android:background="@drawable/ic_app_start"
 
 注意，背景图片要先存放到相应目录中。
 
-![image-20211001095546392](.\readmeimages\image-20211001095546392.png)
+![image-20211001095546392](./readmeimages/image-20211001095546392.png)
 
 最初我设置启动页面的背景图片是直接使用了imageview控件，但是一直无法去除两边的白色空隙，最终网上查询方法参考了：
 
@@ -404,20 +404,20 @@ setContentView(R.layout.activity_splash);
 
 以上步骤如下图所示
 
-![image-20211001095803346](.\readmeimages\image-20211001095803346.png)
+![image-20211001095803346](./readmeimages/image-20211001095803346.png)
 
 ###### 3.在AndroidManifest文件中设置StartActivity为启动页
 
 上面只是将数据与布局关联起来，现在我们要让APP启动时默认显示我们想要的启动页。在AndroidManifest文件中，将默认启动页设置为我们的StartActivity即可：
 具体操作是把activity的android:name属性值修改为”.StartActivity”。如下图
 
-![image-20211001095820494](.\readmeimages\image-20211001095820494.png)
+![image-20211001095820494](./readmeimages/image-20211001095820494.png)
 
 ###### 4.启动界面效果图
 
 已经实现默认启动页的显示及全屏显示背景图片。目前还需要改进的地方是把那个导航栏去除
 
-![image-20211001095908633](.\readmeimages\image-20211001095908633.png)
+![image-20211001095908633](./readmeimages/image-20211001095908633.png)
 
 ###### 5.去除导航栏可以用下面的方法
 
@@ -425,7 +425,7 @@ setContentView(R.layout.activity_splash);
 
 [Android开发中的全屏背景显示方案]: https://blog.csdn.net/weixin_34292402/article/details/85788424
 
-![image-20211001095934744](.\readmeimages\image-20211001095934744.png)
+![image-20211001095934744](./readmeimages/image-20211001095934744.png)
 
 代码如下：
 
@@ -437,16 +437,16 @@ WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 需要注意的是，这段代码要写在渲染布局之前，如下图
 
-![image-20211001100042757](.\readmeimages\image-20211001100042757.png)
+![image-20211001100042757](./readmeimages/image-20211001100042757.png)
 
 后来发现下列这一段注释掉也没事
 
-![image-20211001100053347](.\readmeimages\image-20211001100053347.png)
+![image-20211001100053347](./readmeimages/image-20211001100053347.png)
 
 6.现在再看看效果，如下图，已经可以显示启动页了
 既实现了全屏，也实现了导航栏隐藏。
 
-![image-20211001100104392](.\readmeimages\image-20211001100104392.png)
+![image-20211001100104392](./readmeimages/image-20211001100104392.png)
 
 7.接下来需要实现的是，显示了启动页之后，跳转到应用主界面
 实现activity跳转的关键代码是
@@ -463,26 +463,26 @@ new Handler().postDelayed(new Runnable() {
 
 如下图
 
-![image-20211001100142117](.\readmeimages\image-20211001100142117.png)
+![image-20211001100142117](./readmeimages/image-20211001100142117.png)
 
 8.运行程序，成功实现界面跳转。
 
-![image-20211001100154213](.\readmeimages\image-20211001100154213.png)
+![image-20211001100154213](./readmeimages/image-20211001100154213.png)
 
 ##### 二、软件的三大界面
 
 关键技术是TabLayOut+ViewPager+ FragmentPagerAdapter +Fragment。
 ①布局文件中使用TabLayout和ViewPager，要实现TabLayout在界面的底部，关键需要在TabLayout的布局中添加下列属性：
 
-![image-20211001100219984](.\readmeimages\image-20211001100219984.png)
+![image-20211001100219984](./readmeimages/image-20211001100219984.png)
 
 ②新建adapter继承FragmentPagerAdapter，用于将若干个Fragment和Tab的标题装到ViewPager内，使得——当滑动Tab时，ViewPager能获取Tab相应的Fragment，。这个Adapter重要的要实现的函数是构造函数，重载getPageTitle【Tab的标题】，getItem【获得Tab对应的Fragment】，getCount【Tab数目】
 
-![image-20211001100238842](.\readmeimages\image-20211001100238842.png)
+![image-20211001100238842](./readmeimages/image-20211001100238842.png)
 
 ③新建三个Fragment对象，分别用来实现主界面、收礼记录界面、随礼记录界面三个界面。
 
-![image-20211001100258326](.\readmeimages\image-20211001100258326.png)
+![image-20211001100258326](./readmeimages/image-20211001100258326.png)
 
 ④通过以下代码实现默认显示主界面，主界面Fragment的索引为1。
 
@@ -492,7 +492,7 @@ new Handler().postDelayed(new Runnable() {
 
 ⑤创建Adapter对象，并初始化数据包括Fragment及String标题数组，然后借助Adapter实现ViewPager和TabLayout相关联。关键代码如下：
 
-![image-20211001100323736](.\readmeimages\image-20211001100323736.png)
+![image-20211001100323736](./readmeimages/image-20211001100323736.png)
 
 ##### 三、主界面
 
@@ -504,7 +504,7 @@ new Handler().postDelayed(new Runnable() {
 
 2. 利用安卓自带的日历控件，先配置好布局文件，如下图所示
 
-   ![image-20211001100607012](.\readmeimages\image-20211001100607012.png)
+   ![image-20211001100607012](./readmeimages/image-20211001100607012.png)
 
 3. 在主activity中添加日历的事件监听函数
    	前面我们已经在布局文件中写好日历控件的基本信息了，现在就要在渲染这个布局文件的activity中，添加这个控件的监听函数。
@@ -523,12 +523,12 @@ new Handler().postDelayed(new Runnable() {
 
    接下来为这个控件添加一个事件监听函数，用于获取当前选中日期（日期存储在当前fragment的一个私有成员变量中）代码截图如下
 
-   ![image-20211001100635599](.\readmeimages\image-20211001100635599.png)
+   ![image-20211001100635599](./readmeimages/image-20211001100635599.png)
 
 - 利用FloatingActionButton+Intent+onActivityResult实现添加信息的功能。
   用fab菜单实现两个fab按钮，这两个按钮分别负责添加随礼、收礼记录的功能，用户按需选择任意一个按钮。布局如下图
 
-  ![image-20211001100955546](.\readmeimages\image-20211001100955546.png)
+  ![image-20211001100955546](./readmeimages/image-20211001100955546.png)
 
   **关键技术主要是按钮的监听函数需要实现两个activity的数据传递：**
 
@@ -542,11 +542,11 @@ new Handler().postDelayed(new Runnable() {
 
   4. A在onActivityResult中接收B传回的数据，更新界面
 
-     ![image-20211001100933491](.\readmeimages\image-20211001100933491.png)
+     ![image-20211001100933491](./readmeimages/image-20211001100933491.png)
 
      按钮的效果如下
 
-![image-20211001101018075](.\readmeimages\image-20211001101018075.png)
+![image-20211001101018075](./readmeimages/image-20211001101018075.png)
 
 ##### 四、随礼/收礼记录界面需求：
 
@@ -556,17 +556,17 @@ new Handler().postDelayed(new Runnable() {
 ①处理数据：
 首先从需求出发，因为我希望在屏幕上显示人名、金额、日期，所以声明pay类表示一个信息：
 
-![image-20211001101115223](.\readmeimages\image-20211001101115223.png)
+![image-20211001101115223](./readmeimages/image-20211001101115223.png)
 
 然后在fragment中初始化
 
-![image-20211001101125302](.\readmeimages\image-20211001101125302.png)
+![image-20211001101125302](./readmeimages/image-20211001101125302.png)
 
 到此为止，我们的数据处理就结束了。
 ②布局处理：
 因为ListView列表中有很多子项目，因此若我们要显示数据，就要把数据绑定到子项目对应的控件上去。这时我们需要有一个描述该控件的布局的布局文件，子项目显示人名、金额、日期
 
-![image-20211001101430860](.\readmeimages\image-20211001101430860.png)
+![image-20211001101430860](./readmeimages/image-20211001101430860.png)
 
 然后根据实验要求，完善布局文件代码。过程中我发现标签都是单标签，属性是写在尖括号内的。并且熟悉了id属性的书写格式。其次对宽高属性也有了一点理解。其中文本标签的text属性我没有写，因为这个text是我们后续会在控制层用数据填写的。 
  到这里，我们的布局文件就完成了。
@@ -574,13 +574,13 @@ new Handler().postDelayed(new Runnable() {
 适配器的本质就是生成控件并且把数据绑定到控件上去。
 因为这里我们的数据源比较特殊，它是我们自定义的 类，所以我们要根据这个 类写一个“专属适配器”。 如下图这行代码，是我用来声明并初始化上述我预想中的“专属适配器” 的 ，我们需要重写BookAdapter类的getview方法，这是最核心的。 getview的本质就是生成控件，并把数据绑定到控件上。这里我们需要：1.先获取数据源2.然后生成控件3.最后把数据绑定到控件上去。这三步的代码如下图所示
 
-![image-20211001101455017](.\readmeimages\image-20211001101455017.png)
+![image-20211001101455017](./readmeimages/image-20211001101455017.png)
 
 完成了适配器的创建以后，我必须要安装上这个适配器才能使其发挥作用。
 ④安装适配器
 安装适配器的意思就是说，把适配器设置到ListView控件上，使的这个ListView能在适配器的作用下，显示子项目。安装适配器的代码如下。
 
-![image-20211001101513333](.\readmeimages\image-20211001101513333.png)
+![image-20211001101513333](./readmeimages/image-20211001101513333.png)
 
 ###### 2.onCreateContextMenu+onContextItemSelected为列表项实现菜单及响应。
 
@@ -589,12 +589,12 @@ onCreateContextMenu,在创建菜单时调用，可以获得创建菜单时的视
 ①直接 generate 重写onCreateContextMenu，即可得到一个代码模板
 ②然后为这个菜单添加一些菜单项，如下图。其中itemId代表每一个菜单项，title是该菜单项显示出来的字符。
 
-![image-20211001101541510](.\readmeimages\image-20211001101541510.png) onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo)：在创建菜单时调用，可以获得创建菜单时的视图以及所点击的项目等参数，可为不同视图创建不同菜单。
+![image-20211001101541510](./readmeimages/image-20211001101541510.png) onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo)：在创建菜单时调用，可以获得创建菜单时的视图以及所点击的项目等参数，可为不同视图创建不同菜单。
 （二）第二步：registerForContextMenu(listviewCat)——为对应的Listview控件注册上下文菜单。
 这一步是为listview控件添加上下文菜单menu的关键步骤。下图红框的代码就是为我们的Listview注册刚才写好的上下文菜单menu。如果没有这一句代码，长按这个Listview是不会弹出菜单的。
 另外，这一步属于对控件的操作，因此放在控件初始化方法initView里。如下图代码，为listviewCat注册了一个菜单响应的宿主（宿主是activity窗口)
 
-![image-20211001101602568](.\readmeimages\image-20211001101602568.png)
+![image-20211001101602568](./readmeimages/image-20211001101602568.png)
 
 （三）第三步：重写 onContextItemSelected菜单点击事件响应函数——当我们选中菜单某一项时，会执行该菜单项所对应的操作。这一步里，我们就要为每一个菜单项设置他们各自相应的操作，这个操作也可以理解为“响应”。具体步骤如下：
 ①直接 generate，重写onContextItemSelected，即可得到一个代码模板
@@ -602,7 +602,7 @@ onCreateContextMenu,在创建菜单时调用，可以获得创建菜单时的视
 ③可以使用switch-case结构来实现选中不同菜单项时执行不同的操作。
 ④如下图，该函数就是菜单响应函数，其中他只有唯一一个参数，就是item，item指的就是菜单中被选中的菜单项，这个对象有一个getItemId方法，用于获取菜单项的itemId，由此可以定位到相应的操作分支中，以便执行：
 
-![image-20211001101619468](.\readmeimages\image-20211001101619468.png)
+![image-20211001101619468](./readmeimages/image-20211001101619468.png)
 
 ###### 3.Intent+onActivityResult实现两个activity数据传递。
 
@@ -616,7 +616,7 @@ onCreateContextMenu,在创建菜单时调用，可以获得创建菜单时的视
 这一步主要在于把要存储的对象序列化，然后用输入输出流写到本地的一个txt文件中，每次打开软件都从这个文件读取数据，这样就可以实现数据的持久化。要注意，每次用户修改数据后应该选取合适的地方保存（上传）数据。
 **因为下图红框代码，我的程序无法正确load数据，要注意！注释掉就可以了。**
 
-![image-20211001101640492](.\readmeimages\image-20211001101640492.png)
+![image-20211001101640492](./readmeimages/image-20211001101640492.png)
 
 ###### 5.lazyload+onResume实现fragment懒加载。
 
@@ -642,7 +642,7 @@ onCreateContextMenu,在创建菜单时调用，可以获得创建菜单时的视
 
 4. 将点击该fragment后想加载的数据和view的逻辑（代码）放到Fragment的onResume()方法中即可
 
-   ![image-20211001102051970](.\readmeimages\image-20211001102051970.png)
+   ![image-20211001102051970](./readmeimages/image-20211001102051970.png)
 
 ##### 五、UpdateActivity数据更新
 
@@ -650,19 +650,19 @@ onCreateContextMenu,在创建菜单时调用，可以获得创建菜单时的视
 
   在onCreate方法中借助Calendar获取当时的年，月，日，如下图
 
-![image-20211001102256275](.\readmeimages\image-20211001102256275.png)
+![image-20211001102256275](./readmeimages/image-20211001102256275.png)
 
 通过按钮触发日期选择器
 
-![image-20211001102338045](.\readmeimages\image-20211001102338045.png)
+![image-20211001102338045](./readmeimages/image-20211001102338045.png)
 
 实现选择器的监听，并将获取到的结果设置到TextView上
 
-![image-20211001102352932](.\readmeimages\image-20211001102352932.png)
+![image-20211001102352932](./readmeimages/image-20211001102352932.png)
 
 下图是日期选择器效果图
 
-![image-20211001102410647](.\readmeimages\image-20211001102410647.png)
+![image-20211001102410647](./readmeimages/image-20211001102410647.png)
 
 - spinner+ArrayAdapter实现下来表单选择收礼缘由。
   1.定义下拉列表的列表项内容 ArrayList<String>。
